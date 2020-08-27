@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import MovieList from './components/MovieList';
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
           <Header />
           <div className="container">
             <Route exact path='/' component={Home} />
+            <Route exact path="/movies" render={ () => <MovieList auth={this.state.auth} /> } />
           </div>
           <Footer />
         </div>
