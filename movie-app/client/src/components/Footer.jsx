@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer>
-      Made with ❤️ by Team ADA
+      <h1>made by me n my best friends</h1>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
