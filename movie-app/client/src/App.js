@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import MovieList from './components/MovieList';
 
 import Login from './components/Login'
 import Register from './components/Register'
@@ -91,6 +92,7 @@ class App extends Component {
           <Header logout={this.logout} />
           <div className="container">
             <Route exact path='/' component={Home} />
+            <Route exact path="/movies" render={ () => <MovieList auth={this.state.auth} /> } />
             <Route exact path='/login' render={() => (
               this.state.auth
                 ? <Redirect to='/dashboard' />
