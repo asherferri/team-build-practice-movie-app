@@ -5,12 +5,7 @@ const MovieController = {
     index: (req, res, next) => {
         Movie.getAll()
             .then(movies => {
-                // prettyLog('Movie Controller -> index -> Movie.getAll() -> movies', movies)
-                
-                // console.log(`Movie Controller -> index -> Movie.getAll() -> movies\n${movies}`)
-
-                console.log(movies)
-                
+                prettyLog('Movie Controller -> index -> Movie.getAll() -> movies', movies)
                 res.json({
                     message: 'ok',
                     data: { movies }

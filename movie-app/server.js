@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser')
 const session = require('express-session')
 const passport = require('passport')
 
+const movieRouter = require('./routes/movie-routes')
+
 //initializes app and setups dotenv
 const app = express()
 require('dotenv').config()
@@ -41,7 +43,7 @@ app.get('/', (req, res) => {
 // const authRoutes = require('./routes/auth-routes')
 // app.use('/api/auth', authRoutes)
 // const movieRoutes = require('./routes/movie-routes')
-// app.use('./api/movies', movieRoutes)
+app.use('/api/movies', movieRouter)
 
 //error handlers
 app.use('*', (req, res) => {
