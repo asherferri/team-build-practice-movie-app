@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <header>
       <nav>
@@ -12,6 +12,8 @@ const Header = () => {
           <li><Link to="/register">Register</Link></li>
           <li><Link to="/dashboard">Dashboard</Link></li>
           <li><Link to="/movies">Movies</Link></li>
+          {/* nxt line added by Ashr */}
+          <li><span className="logout" onClick={props.logout}>Logout</span></li>
         </ul>
       </nav>
     </header>

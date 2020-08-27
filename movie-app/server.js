@@ -40,10 +40,10 @@ app.get('/', (req, res) => {
     res.send('Hello Andrew, Damion, Ashr')
 })
 // //commented out routes for the meantime
-// const authRoutes = require('./routes/auth-routes')
-// app.use('/api/auth', authRoutes)
-// const movieRoutes = require('./routes/movie-routes')
-app.use('/api/movies', movieRouter)
+const authRoutes = require('./routes/auth-routes')
+app.use('/api/auth', authRoutes)
+const movieRoutes = require('./routes/movie-routes')
+app.use('/api/movies', movieRoutes)
 
 //error handlers
 app.use('*', (req, res) => {
