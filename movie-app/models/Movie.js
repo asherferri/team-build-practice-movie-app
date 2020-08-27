@@ -16,3 +16,5 @@ class Movie {
         .then(movies => movies.map(movie => new this(movie)))
     }
 }
+
+module.exports = Movie
