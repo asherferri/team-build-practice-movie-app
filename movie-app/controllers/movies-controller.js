@@ -12,7 +12,7 @@ const MovieController = {
                 })
             })
             .catch(next)
-    }
+    },
 
     show: (req, res, next) => {
         Movie.getById(req.params.id)
@@ -23,7 +23,7 @@ const MovieController = {
                 });
             })
             .catch(next);
-    };
+    },
 
     create: (req, res, next) => {
         new Movie({
@@ -40,7 +40,7 @@ const MovieController = {
                 });
             })
             .catch(next);
-    };
+    },
 
     update: (req, res, next) => {
         Movie.getById(req.params.id)
@@ -58,7 +58,7 @@ const MovieController = {
                 });
             })
             .catch(next);
-    };
+    },
 
     delete: (req, res, next) => {
         Movie.getById(req.params.id)
@@ -69,7 +69,7 @@ const MovieController = {
                 });
             })
             .catch(next);
-    };
+    },
 }
 
 module.exports = MovieController
