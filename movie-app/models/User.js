@@ -1,5 +1,4 @@
 const db = require('../db/config')
-const { static } = require('express')
 
 class User {
     constructor({ id, username, email, password_digest}) {
@@ -9,7 +8,7 @@ class User {
         this.password_digest = password_digest
     }
 
-    static findByUserName() {
+    static findByUserName(username) {
         return db.oneOrNone(`
         SELECT * FROM users WHERE username = $1
         `, username)

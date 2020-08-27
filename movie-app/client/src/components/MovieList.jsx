@@ -21,7 +21,7 @@ class MovieList extends Component {
 
     getAllMovies() {
         fetch(`/api/movies`, { credentials: 'include' })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(res => {
             this.setState({
                 movies: res.data.movies,
@@ -42,7 +42,7 @@ class MovieList extends Component {
 
         fetch(`/api/movies/${id || ''}`, {
             method: method,
-            credentials: include,
+            credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
             },
